@@ -8,6 +8,7 @@ ion-toolbar{
 
 .publicidad{
     text-align: center;
+    --background: black;
 }
 
 ion-button{
@@ -20,4 +21,13 @@ h4{
     text-align: center;
     text-decoration: underline;
     font-style: oblique;
+    color: white;
+}
+
+ion-card-subtitle{
+    color: var(--ion-color-ny);
+}
+
+ion-content{
+    --background: black;
 }

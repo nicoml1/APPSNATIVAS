@@ -7,11 +7,23 @@ ion-toolbar{
 }
 
 .guard{
-    text-decoration: underline;
+    text-decoration: overline;
 }
 
 ion-button{
     --background: #e2f93796;
     --background-activated: black;
     color: black;
+}
+
+ion-content{
+    --background: black;
+}
+
+ion-card-subtitle{
+    color: var(--ion-color-ny);
+}
+
+h4{
+    margin-top: 0px;
 }
