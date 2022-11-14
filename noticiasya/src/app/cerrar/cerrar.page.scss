@@ -1,3 +1,11 @@
 ion-toolbar{
     background-color: var(--ion-color-ny);
 }
+
+ion-button{
+    --background: #e2f93796;
+    --background-activated: black;
+    color: black;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

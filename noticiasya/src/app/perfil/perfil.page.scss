@@ -3,10 +3,9 @@ ion-toolbar{
 }
 
 .datos{
+    color: #d2e827d7;
     margin-left: 55px;
     margin-right: 55px;
-    margin-bottom: 50px;
-    background-color: #e2f93796;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -14,10 +13,14 @@ ion-toolbar{
 
 h4{
     text-align: center;
+    font-style: oblique;
 }
 
 ion-button{
-    --background: none;
-    color: #e2f93796;
-    margin-bottom: 15px;
+    --background: #e2f93796;
+    --background-activated: black;
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

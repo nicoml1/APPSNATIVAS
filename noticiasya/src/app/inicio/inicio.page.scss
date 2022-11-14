@@ -12,5 +12,12 @@ ion-toolbar{
 
 ion-button{
     --background: #e2f93796;
+    --background-activated: black;
     color: black;
+}
+
+h4{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
 }
