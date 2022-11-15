@@ -17,28 +17,28 @@ export class NoticiasService {
     {
       id: '2',
       title: 'La sostenibilidad del medio ambiente afectada por la población',
-      imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6VgiMZRcxBTkVjLlnL8ranLiv6zJLLQ1VTQ&usqp=CAU',
+      imageURL: 'https://ricardoalejandro718660997.files.wordpress.com/2021/10/audience.jpg',
       subtitle: 'Medio Ambiente',
       description: '14/11/2022: A día de hoy, el gran aumento de la población afecta gravemente al medio ambiente. Según la ONU, en el mundo ya viven 8.000 millones de personas, y que para el 2100 se prevé que aumente en un 40%. Este incremento de la poblacion podría generar un fuerte impacto negativo sobre muchas especies, o también en varios ecosistemas.'
     },
     {
       id: '3',
       title: 'Problemas de salud para Alberto Fernández',
-      imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQsa5vbD-Un72xgp6wX5hIO9Tk6qVhN5mRaw&usqp=CAU',
+      imageURL: 'https://media.tycsports.com/files/2021/05/18/283316/alberto-fernandez_862x485.jpg?v=1',
       subtitle: 'Política',
       description: '15/11/2022: El Presidente de la república Argentina se descompenso mientras estaba en la cumbre del G20, que se está realizando en Indonesia. Empezó teniendo mareos y nauseas, por ende se activó el protocolo de emergencia y fue llevado directamente al hospital de la ciudad de Bali. El diagnóstico dio que tuvo una gastritis erosiva, la cual le generó un sangrado interno. Sin embargo, Fernández ya se encuentra en buenas condiciones y pudo retomar sus actividades en el G20. Por ejemplo, se reunió con Xi Jiping, presidente de China.'
     },
     {
       id: '4',
       title: 'Nuevo Album de YSY A',
-      imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvQ9sbX0irlMFcdu0DX_8IGcgcGALSsUdUGQ&usqp=CAU',
+      imageURL: 'https://pbs.twimg.com/media/FUw6RZOWUAAPDki.jpg',
       subtitle: 'Música',
       description: '16/11/2022: El pasado 11 de Noviembre, el artista Argentino Alejo Nahuel Acosta o mejor conocido como "YSY A" lanzo su nuevo y cuarto album llamado "YSYSISMO", que tiene 12 canciones de estilos muy variados como Trap y Rap. La respuesta del publico hacia este disco fue muy positiva, siendo el album Argentino con más reproducciones en su primera semana desde su lkanzamiento, acumuluando 11 millones de reproducciones. Las canciones mas populares hasta ahora fueron "Todo Pago", "Reventando Relojes" y "Cuantos Terminos"'
     },
     {
       id: '5',
       title: 'Posible Ataque de Rusia a Polonia',
-      imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQ3H60IbqMOFJ2Zs0kQynXZV6hZFuYJzzhA&usqp=CAU',
+      imageURL: 'https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2022/11/15/el-ministro-de-defensa-polaco-mariusz-blaszczak-a-su-llegada-la-oficina-de-seguridad-nacional-en-varsovia.jpeg',
       subtitle: 'Guerra',
       description: '17/11/2022: En la madrugada del día de ayer, un misil ruso impacto en una zona rural de Polonia, dejanndo así 2 víctimas fatales. Esto fue muy cerca de la frontera entre Polonia y Ucrania (País que esta en guerra con Rusia). La situación creó mucha incertidumbre en el gobierno Polaco, por lo tanto, su Primer Ministro convoco a una reunión de urgencia, con su gabinete de seguridad para ver que medidad o decisones tomar al respecto, ya que Polonia es un país de la Otan.'
     },
