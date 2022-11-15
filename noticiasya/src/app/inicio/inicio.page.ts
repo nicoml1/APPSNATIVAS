@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NoticiasService } from './noticias.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  noticias = []
+
+  constructor(private noticiaService: NoticiasService, private router: Router) { }
 
   ngOnInit() {
+    this.noticias = this.noticiaService.getNoticias();
+  }
+
+  ionViewWillEnter() {
+    this.noticias = this.noticiaService.getNoticias();
+  }
+
+  addNewNoticia(){
+    this.router.navigate(['/new-noticia']);
   }
 
 }

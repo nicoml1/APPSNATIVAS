@@ -21,7 +21,20 @@ const routes: Routes = [
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+      },
+      {
+        path: ":noticiaId",
+        loadChildren: () => import('./inicio/noticias-detalle/noticias-detalle.module').then(m => m.NoticiasDetallePageModule)
+      }
+    ]
+  },
+  {
+    path: 'new-noticia',
+    loadChildren: () => import('./inicio/addnoticia/addnoticia.module').then(m => m.AddnoticiaPageModule)
   }
 ];
 

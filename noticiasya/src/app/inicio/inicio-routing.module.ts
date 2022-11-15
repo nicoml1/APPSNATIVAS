@@ -9,8 +9,12 @@ const routes: Routes = [
     component: InicioPage
   },
   {
-    path: 'noticias',
-    loadChildren: () => import('./noticias/noticias.module').then( m => m.NoticiasPageModule)
+    path: 'noticias-detalle',
+    loadChildren: () => import('./noticias-detalle/noticias-detalle.module').then( m => m.NoticiasDetallePageModule)
+  },
+  {
+    path: 'addnoticia',
+    loadChildren: () => import('./addnoticia/addnoticia.module').then( m => m.AddnoticiaPageModule)
   }
 ];
 

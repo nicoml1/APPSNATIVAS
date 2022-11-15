@@ -1,0 +1,26 @@
+ion-toolbar{
+    background-color: #e2fc1d;
+}
+
+ion-content{
+    --background: black;
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 0;
+}
+
+h2{
+    color: var(--ion-color-ny);
+    text-align: center;
+    margin-top: 0;
+    font-size: larger;
+}
+
+p{
+    color: white;
+}

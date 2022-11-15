@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="ny">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar nueva noticia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="floating">Título</ion-label>
+            <ion-input type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-item>
+            <ion-label position="floating">Imágen</ion-label>
+            <ion-input type="text" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-item>
+            <ion-label position="floating">Categoría</ion-label>
+            <ion-input type="text" placeholder="Categoría de la noticia" #subtitle></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-item>
+            <ion-label position="floating">Descripción</ion-label>
+            <ion-input type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-button (click)="saveNewNoticia(title, imageURL, subtitle, description)">
+            ENVIAR
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

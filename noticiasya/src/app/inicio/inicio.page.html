@@ -11,99 +11,18 @@
 
   <h4>Noticias destacadas</h4>
 
-  <ion-card button="true" [routerLink]="['/cerrar']">
-    <img src="../../assets/noticiasimg/Incendio.jpg" />
-    <ion-card-header>
-      <ion-card-title>Título noticia</ion-card-title>
-      <ion-card-subtitle>Categoría</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Descripción de la noticia. Descripción de la noticia. Descripción de la noticia. 
-    </ion-card-content>
-  </ion-card>
+    <ion-card *ngFor="let noticia of noticias" button="true" [routerLink]="['/inicio', noticia.id]">
+      <ion-img [src]="noticia.imageURL"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{noticia.title}}</ion-card-title>
+        <ion-card-subtitle>{{noticia.subtitle}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
 
-  <ion-card button="true" [routerLink]="['/cerrar']">
-    <img src="../../assets/noticiasimg/Incendio.jpg" />
-    <ion-card-header>
-      <ion-card-title>Título noticia</ion-card-title>
-      <ion-card-subtitle>Categoría</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Descripción de la noticia. Descripción de la noticia. Descripción de la noticia. 
-    </ion-card-content>
-  </ion-card>
-
-  
-  <ion-item class="publicidad">
-    <ion-label>
-      <h3 class="cat">Anuncio publicitario</h3>
-      <a href="https://www.nike.com/until-we-all-win"><img src="../../assets/noticiasimg/nike.png"></a>
-    </ion-label>
-  </ion-item>
-
-  <ion-card button="true" [routerLink]="['/cerrar']">
-    <img src="../../assets/noticiasimg/Incendio.jpg" />
-    <ion-card-header>
-      <ion-card-title>Título noticia</ion-card-title>
-      <ion-card-subtitle>Categoría</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Descripción de la noticia. Descripción de la noticia. Descripción de la noticia. 
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card button="true" [routerLink]="['/cerrar']">
-    <img src="../../assets/noticiasimg/Incendio.jpg" />
-    <ion-card-header>
-      <ion-card-title>Título noticia</ion-card-title>
-      <ion-card-subtitle>Categoría</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Descripción de la noticia. Descripción de la noticia. Descripción de la noticia. 
-    </ion-card-content>
-  </ion-card>
-
-  <ion-item class="publicidad">
-    <ion-label>
-      <h3 class="cat">Anuncio publicitario</h3>
-      <a href="https://www.hbolatam.com/us"><img src="../../assets/noticiasimg/hbo.jpg"></a>
-    </ion-label>
-  </ion-item>
-
-  <ion-card button="true" [routerLink]="['/cerrar']">
-    <img src="../../assets/noticiasimg/Incendio.jpg" />
-    <ion-card-header>
-      <ion-card-title>Título noticia</ion-card-title>
-      <ion-card-subtitle>Categoría</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Descripción de la noticia. Descripción de la noticia. Descripción de la noticia. 
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card button="true" [routerLink]="['/cerrar']">
-    <img src="../../assets/noticiasimg/Incendio.jpg" />
-    <ion-card-header>
-      <ion-card-title>Título noticia</ion-card-title>
-      <ion-card-subtitle>Categoría</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Descripción de la noticia. Descripción de la noticia. Descripción de la noticia. 
-    </ion-card-content>
-  </ion-card>
-
-  <ion-item class="publicidad">
-    <ion-label>
-      <h3 class="cat">Anuncio publicitario</h3>
-      <a href="https://www.pepsi.com/"><img src="../../assets/noticiasimg/pepsi.jpg"></a>
-    </ion-label>
-  </ion-item>
-
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="addNewNoticia()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 
 </ion-content>
