@@ -9,10 +9,10 @@ export class NoticiasService {
   private noticias: Noticia[] = [
     {
       id: '1',
-      title: 'Título de la noticia',
+      title: 'Lionel Messi ya esta listo para el mundial de Qatar',
       imageURL: 'https://th.bing.com/th/id/OIP.qrLDaqCWcoKmjFB3eHrnuAHaI6?pid=ImgDet&rs=1',
-      subtitle: 'Categoría',
-      description: 'Fecha, ciudad. Descripción de la noticia. Descripción de la noticia. Descripción de la noticia.'
+      subtitle: 'Deportes',
+      description: '14/11/2022: Lionel Messi ya está en Qatar y realizo su primer entrenamiento con la Seleccion Argentina, pensando en el partido amistoso contra los Emiratos Árabes de este Miércoles, y obviamente en el debut mundialista contra Arabia Saudita el 22/11. Argentina ya cuenta con sus 26 jugadores y todo su cuerpo técnico que van a competir en esta nueva copa del mundo'
     },
     {
       id: '2',
