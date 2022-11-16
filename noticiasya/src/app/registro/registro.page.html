@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="ny">
+    <ion-title>Registrarme</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+
+          <h1>BIENVENIDO A NOTICIAS YA!</h1>
+
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" placeholder="Nombre" #title></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input type="text" placeholder="Apellido" #imageURL></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-item>
+            <ion-label position="floating">Mail</ion-label>
+            <ion-input type="email" placeholder="ejemplo@mail.com" #imageURL></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" placeholder="Contraseña" #imageURL></ion-input>
+          </ion-item>
+          <hr size="8px" color="black" />
+          <ion-button class="boto">
+            REGISTRARME
+          </ion-button>
+          <ion-button fill="clear" [routerLink]="['/login']">
+            Iniciar sesión
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
