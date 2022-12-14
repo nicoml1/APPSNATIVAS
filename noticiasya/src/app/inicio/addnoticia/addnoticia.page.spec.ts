@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 import { AddnoticiaPage } from './addnoticia.page';
 
@@ -10,7 +12,11 @@ describe('AddnoticiaPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AddnoticiaPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        ReactiveFormsModule
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AddnoticiaPage);
@@ -18,7 +24,15 @@ describe('AddnoticiaPage', () => {
     fixture.detectChanges();
   }));
 
+  it('should create form on init',() => {
+    component.ngOnInit();
+    
+    expect(component.form).not.toBeUndefined();
+  })
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
+

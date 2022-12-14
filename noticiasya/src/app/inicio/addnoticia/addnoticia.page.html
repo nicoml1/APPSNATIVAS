@@ -8,29 +8,29 @@
 </ion-header>
 
 <ion-content>
-
+ <form [formGroup]="form">
   <ion-row>
     <ion-col>
       <ion-card>
         <ion-card-content>
           <ion-item>
             <ion-label position="floating">Título</ion-label>
-            <ion-input type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
+            <ion-input type="text" formControlName="titulo" placeholder="Escribe el título de la noticia" #title></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Imágen</ion-label>
-            <ion-input type="url" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
+            <ion-input type="url" formControlName="imagen" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Categoría</ion-label>
-            <ion-input type="text" placeholder="Categoría de la noticia" #subtitle></ion-input>
+            <ion-input type="text" formControlName="categoria" placeholder="Categoría de la noticia" #subtitle></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Descripción</ion-label>
-            <ion-input type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
+            <ion-input type="text" formControlName="descripcion" placeholder="Cuerpo de la noticia" #description></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-button (click)="saveNewNoticia(title, imageURL, subtitle, description)">
@@ -40,5 +40,6 @@
       </ion-card>
     </ion-col>
   </ion-row>
+</form>
 
 </ion-content>
