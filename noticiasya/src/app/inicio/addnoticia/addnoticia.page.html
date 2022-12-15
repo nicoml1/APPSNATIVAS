@@ -32,9 +32,11 @@
             <ion-input type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
-          <ion-button (click)="saveNewNoticia(title, imageURL, subtitle, description)">
-            ENVIAR
-          </ion-button>
+            <ion-buttons>
+            <button ion-button (click)="NoticiaService.registrar(noticia)">
+              ENVIAR
+            </button>
+            </ion-buttons>
         </ion-card-content>
       </ion-card>
     </ion-col>

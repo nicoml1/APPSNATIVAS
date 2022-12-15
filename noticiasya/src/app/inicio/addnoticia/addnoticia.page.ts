@@ -22,3 +22,5 @@ export class AddnoticiaPage implements OnInit {
   }
 
 }
+
+
