@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NoticiaService } from 'src/app/noticia.service';
+import { NoticiaService } from '../noticia.service';
 
 @Component({
   selector: 'app-addnoticia',
@@ -11,14 +11,35 @@ import { NoticiaService } from 'src/app/noticia.service';
 export class AddnoticiaPage implements OnInit {
   form: FormGroup;
 
-  constructor(private noticiaService: NoticiaService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private noticiaservice: NoticiaService, private router: Router, private formBuilder: FormBuilder) { 
+    this.form = this.formBuilder.group ({
+      'title': new FormControl("", Validators.required),
+      'imageURL': new FormControl("", Validators.required),
+      'subtitle': new FormControl("", Validators.required),
+      'description': new FormControl("", Validators.required),
+    });
+  }
+
+  noticias = []
+
 
   ngOnInit() { 
   }
 
-  saveNewNoticia(noticia) {
-    this.noticiaService.registrar(noticia);
-    this.router.navigate(['/inicio'])
+  async saveNewNoticia() {
+    let f = this.form.value;
+
+    let noticia = {
+      titulo: f.title,
+      categoria: f.subtitle,
+      imagen: f.imageURL,
+      cuerpo: f.description
+    }
+
+    localStorage.setItem('noticia',JSON.stringify(noticia));
+
+    this.noticiaservice.registrar(noticia)
+
   }
 
 }

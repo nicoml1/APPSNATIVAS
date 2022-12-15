@@ -12,31 +12,31 @@
     <ion-col>
       <ion-card>
         <ion-card-content>
+          <form [formGroup]="form" (keyup.enter)="saveNewNoticia()">
           <ion-item>
             <ion-label position="floating">Título</ion-label>
-            <ion-input type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
+            <ion-input formControlName="title" type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Imágen</ion-label>
-            <ion-input type="url" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
+            <ion-input formControlName="imageURL" type="url" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Categoría</ion-label>
-            <ion-input type="text" placeholder="Categoría de la noticia" #subtitle></ion-input>
+            <ion-input formControlName="subtitle" type="text" placeholder="Categoría de la noticia" #subtitle></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Descripción</ion-label>
-            <ion-input type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
+            <ion-input formControlName="description" type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
           </ion-item>
           <hr size="8px" color="black" />
             <ion-buttons>
-            <button ion-button (click)="saveNewNoticia()">
-              ENVIAR
-            </button>
+            |<ion-button (click)="saveNewNoticia()">ENVIAR</ion-button>
             </ion-buttons>
+          </form>
         </ion-card-content>
       </ion-card>
     </ion-col>
