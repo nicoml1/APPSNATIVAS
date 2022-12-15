@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NoticiasService } from '../noticias.service';
+import { NoticiaService } from 'src/app/noticia.service';
 
 @Component({
   selector: 'app-addnoticia',
@@ -11,16 +11,14 @@ import { NoticiasService } from '../noticias.service';
 export class AddnoticiaPage implements OnInit {
   form: FormGroup;
 
-  constructor(private noticiasService: NoticiasService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private noticiaService: NoticiaService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() { 
   }
 
-  saveNewNoticia(title, imageURL, subtitle, description) {
-    this.noticiasService.addNoticia(title.value, imageURL.value, subtitle.value, description.value);
+  saveNewNoticia(noticia) {
+    this.noticiaService.registrar(noticia);
     this.router.navigate(['/inicio'])
   }
 
 }
-
-
