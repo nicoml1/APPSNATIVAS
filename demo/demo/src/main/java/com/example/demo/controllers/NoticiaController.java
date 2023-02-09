@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin(origins = "http://localhost:8100")
 @RestController
 @RequestMapping("/noticia")
 public class NoticiaController {
     @Autowired
     NoticiaService noticiaService;
 
+    @CrossOrigin
     @GetMapping()
     public ArrayList<NoticiaModel> obtenerNoticias(){
         return noticiaService.obtenerNoticias();
