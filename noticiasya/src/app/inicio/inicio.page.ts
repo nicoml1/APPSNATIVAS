@@ -14,11 +14,11 @@ export class InicioPage implements OnInit {
   constructor(private noticiaService: NoticiasService, private router: Router) { }
 
   ngOnInit() {
-    this.noticias = this.noticiaService.getNoticias();
+    this.noticias = this.noticiaService.leerNoticias();
   }
 
   ionViewWillEnter() {
-    this.noticias = this.noticiaService.getNoticias();
+    this.noticias = this.noticiaService.leerNoticias();
   }
 
   addNewNoticia(){

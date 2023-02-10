@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NoticiaService } from '../noticia.service';
+import { NoticiasService } from '../noticias.service';
 
 @Component({
   selector: 'app-addnoticia',
@@ -11,7 +11,7 @@ import { NoticiaService } from '../noticia.service';
 export class AddnoticiaPage implements OnInit {
   form: FormGroup;
 
-  constructor(private noticiaservice: NoticiaService, private router: Router, private formBuilder: FormBuilder) { 
+  constructor(private noticiaservice: NoticiasService, private router: Router, private formBuilder: FormBuilder) { 
     this.form = this.formBuilder.group ({
       'title': new FormControl("", Validators.required),
       'imageURL': new FormControl("", Validators.required),
