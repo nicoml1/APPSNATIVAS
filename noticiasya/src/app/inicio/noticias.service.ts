@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Noticia } from './noticia.model';
+//import { Noticia } from './noticia.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ import { Noticia } from './noticia.model';
 
 export class NoticiasService {
 
-  noticias: Noticia[] = [
+  noticias = [    
   
   ]
 
@@ -30,12 +30,6 @@ export class NoticiasService {
       return place.id !== noticiaId
     })
   }
-
-  async getNoticias() {
-        const res = await fetch("http://localhost:8080/noticia")
-        const resjson = (await res).json()
-        return resjson
-    }
   
   async registrar (noticia) {
         const res = await fetch("http://localhost:8080/noticia", {method: "POST", body:JSON.stringify(noticia), headers: {'Content-Type': 'application/json'}})

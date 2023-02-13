@@ -9,10 +9,6 @@ const routes: Routes = [
     component: InicioPage
   },
   {
-    path: 'noticias-detalle',
-    loadChildren: () => import('./noticias-detalle/noticias-detalle.module').then( m => m.NoticiasDetallePageModule)
-  },
-  {
     path: 'addnoticia',
     loadChildren: () => import('./addnoticia/addnoticia.module').then( m => m.AddnoticiaPageModule)
   }

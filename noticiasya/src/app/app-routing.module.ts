@@ -13,10 +13,6 @@ const routes: Routes = [
       {
         path: "",
         loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
-      },
-      {
-        path: ":noticiaId",
-        loadChildren: () => import('./inicio/noticias-detalle/noticias-detalle.module').then(m => m.NoticiasDetallePageModule)
       }
     ]
   },

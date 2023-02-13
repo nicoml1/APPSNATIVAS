@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NoticiasService } from '../noticias.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-addnoticia',
@@ -11,7 +12,7 @@ import { NoticiasService } from '../noticias.service';
 export class AddnoticiaPage implements OnInit {
   form: FormGroup;
 
-  constructor(private noticiaservice: NoticiasService, private router: Router, private formBuilder: FormBuilder) { 
+  constructor(private noticiaservice: NoticiasService, private router: Router, private formBuilder: FormBuilder, public alertController: AlertController) { 
     this.form = this.formBuilder.group ({
       'title': new FormControl("", Validators.required),
       'imageURL': new FormControl("", Validators.required),
@@ -19,9 +20,6 @@ export class AddnoticiaPage implements OnInit {
       'description': new FormControl("", Validators.required),
     });
   }
-
-  noticias = []
-
 
   ngOnInit() { 
   }
@@ -38,7 +36,14 @@ export class AddnoticiaPage implements OnInit {
 
     localStorage.setItem('noticia',JSON.stringify(noticia));
 
-    this.noticiaservice.registrar(noticia)
+    this.noticiaservice.registrar(noticia);
+
+    const alert = await this.alertController.create({
+      header: "ENVIADA",
+      message: "La noticia ha sido agregada con exito!",
+      buttons: ["OK"]
+    })
+    await alert.present();
 
   }
 
