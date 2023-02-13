@@ -15,6 +15,7 @@ ion-button{
     --background: #e2f93796;
     --background-activated: black;
     color: black;
+    padding-bottom: 10px;
 }
 
 h4{
@@ -26,6 +27,12 @@ h4{
 
 ion-card-subtitle{
     color: #c5db1bed;
+    text-align: center;
+    margin-top: 5px;
+}
+
+ion-card-title{
+    text-align: center;
 }
 
 ion-content{
@@ -35,4 +42,13 @@ ion-content{
 ion-fab-button{
     --background: #e2f93796;
     --color: black;
+}
+
+p{
+    text-align: center;
+}
+
+.elim{
+    padding-bottom: 10px;
+    padding-left: 60px;
 }

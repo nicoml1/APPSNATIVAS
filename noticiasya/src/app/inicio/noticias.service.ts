@@ -25,14 +25,14 @@ export class NoticiasService {
     }
   }
 
-  deleteNoticia(noticiaId: string) {
-    this.noticias = this.noticias.filter(place => {
-      return place.id !== noticiaId
-    })
+  async deleteNoticia(noticia) {
+    const res = await fetch("http://localhost:8080/noticia", {method: "DELETE", body:JSON.stringify(noticia), headers: {'Content-Type': 'application/json'}})
+        const resjson = (await res).json()
+        return resjson
   }
   
   async registrar (noticia) {
-        const res = await fetch("http://localhost:8080/noticia", {method: "POST", body:JSON.stringify(noticia), headers: {'Content-Type': 'application/json'}})
+    const res = await fetch("http://localhost:8080/noticia", {method: "POST", body:JSON.stringify(noticia), headers: {'Content-Type': 'application/json'}})
         const resjson = (await res).json()
         return resjson
     }
