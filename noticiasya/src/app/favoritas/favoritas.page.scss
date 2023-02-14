@@ -1,0 +1,43 @@
+ion-toolbar{
+    background-color: var(--ion-color-ny);
+}
+
+ion-content{
+    --background: black;
+}
+
+h4{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    color: white;
+}
+
+.cat{
+    color: var(--ion-color-ny);
+}
+
+ion-button{
+    --background: #e2f93796;
+    --background-activated: black;
+    color: black;
+    padding-bottom: 10px;
+}
+
+ion-card-subtitle{
+    color: #c5db1bed;
+    text-align: center;
+    margin-top: 5px;
+}
+
+ion-card-title{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+ion-button{
+    margin-left: 110px;
+}

@@ -51,4 +51,11 @@ export class InicioPage implements OnInit {
     await alert.present();
   }
 
+  handleRefresh(event) {
+    setTimeout(() => {
+      this.getNoticias();
+      event.target.complete();
+    }, 2000);
+  };
+
 }

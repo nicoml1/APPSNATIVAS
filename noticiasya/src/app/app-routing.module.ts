@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'new-noticia',
     loadChildren: () => import('./inicio/addnoticia/addnoticia.module').then(m => m.AddnoticiaPageModule)
   },
+  {
+    path: 'favoritas',
+    loadChildren: () => import('./favoritas/favoritas.module').then( m => m.FavoritasPageModule)
+  },
 ];
 
 @NgModule({
