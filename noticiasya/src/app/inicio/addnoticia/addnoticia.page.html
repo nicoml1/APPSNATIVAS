@@ -23,6 +23,8 @@
           <ion-item>
             <ion-label position="floating">Imágen</ion-label>
             <ion-input formControlName="imageURL" type="url" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
+            <span *ngIf="form.controls.imageURL.invalid && form.controls.imageURL.touched"
+            [ngStyle]="{'color':'red'}"> {{getimageURLMessage()}} </span>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Categoría</ion-label>
