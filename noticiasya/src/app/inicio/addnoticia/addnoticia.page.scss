@@ -10,4 +10,14 @@ ion-button{
     --background: #e2f93796;
     --background-activated: black;
     color: black;
+    margin: 20px;
+}
+
+ion-card-header{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    color: black;
+    font-size: large;
+    padding-top: 40px;
 }

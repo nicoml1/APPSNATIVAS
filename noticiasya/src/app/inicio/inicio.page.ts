@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NoticiasService } from './noticias.service';
 import { NoticiaService } from './noticia.service';
 import { ToastController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inicio',
@@ -11,7 +12,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
 
-  constructor(public toastCtrl: ToastController, private noticiasService: NoticiasService, private router: Router, private noticiaService: NoticiaService) { }
+  constructor(public toastCtrl: ToastController, private noticiasService: NoticiasService, private router: Router, private noticiaService: NoticiaService, private alertController: AlertController) { }
 
 
   noticias = [this.getNoticias()]
@@ -41,8 +42,13 @@ export class InicioPage implements OnInit {
     this.todasLasNoticias = Array.from(this.noticias)
   }
 
-  async deleteNoticia() {
-    this.noticiasService.deleteNoticia(this.idNoticia)
+  async elimNoticia() {
+    const alert = await this.alertController.create({
+      header: "Seguro que desea eliminar esta noticia?",
+      message: "Una vez que confirme esta acción, la noticia se borrará de forma permanente.",
+      buttons: ["Cancelar","ELIMINAR"]
+    })
+    await alert.present();
   }
 
 }

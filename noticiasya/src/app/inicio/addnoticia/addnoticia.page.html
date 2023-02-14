@@ -11,30 +11,27 @@
   <ion-row>
     <ion-col>
       <ion-card>
+        <ion-card-header>NUEVA NOTICIA</ion-card-header>
         <ion-card-content>
           <form [formGroup]="form" (keyup.enter)="saveNewNoticia()">
           <ion-item>
             <ion-label position="floating">Título</ion-label>
             <ion-input formControlName="title" type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
           </ion-item>
-          <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Imágen</ion-label>
             <ion-input formControlName="imageURL" type="url" placeholder="Copia el URL de la imágen" #imageURL></ion-input>
           </ion-item>
-          <hr size="8px" color="black" />
           <ion-item>
             <ion-label position="floating">Categoría</ion-label>
             <ion-input formControlName="subtitle" type="text" placeholder="Categoría de la noticia" #subtitle></ion-input>
           </ion-item>
-          <hr size="8px" color="black" />
-          <ion-item>
+          <ion-item counter="true">
             <ion-label position="floating">Descripción</ion-label>
-            <ion-input formControlName="description" type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
+            <ion-input maxlength="1000" formControlName="description" type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
           </ion-item>
-          <hr size="8px" color="black" />
             <ion-buttons>
-            |<ion-button (click)="saveNewNoticia()">ENVIAR</ion-button>
+            <ion-button (click)="saveNewNoticia()"><ion-icon name="send"></ion-icon>| ENVIAR</ion-button>
             </ion-buttons>
           </form>
         </ion-card-content>

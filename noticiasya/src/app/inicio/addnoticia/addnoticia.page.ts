@@ -44,6 +44,7 @@ export class AddnoticiaPage implements OnInit {
       buttons: ["OK"]
     })
     await alert.present();
+    this.router.navigate(['/inicio'])
 
   }
 
