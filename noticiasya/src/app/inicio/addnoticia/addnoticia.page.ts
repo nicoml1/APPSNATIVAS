@@ -14,7 +14,7 @@ export class AddnoticiaPage implements OnInit {
 
   constructor(private noticiaservice: NoticiasService, private router: Router, private formBuilder: FormBuilder, public alertController: AlertController) { 
     this.form = this.formBuilder.group ({
-      'title': new FormControl("", Validators.required),
+      'title': new FormControl("",[Validators.required, Validators.pattern('[a-zA-Z]*')]),
       'imageURL': new FormControl("", Validators.required),
       'subtitle': new FormControl("", Validators.required),
       'description': new FormControl("", Validators.required),
@@ -25,6 +25,7 @@ export class AddnoticiaPage implements OnInit {
   }
 
   async saveNewNoticia() {
+    console.warn(this.form.value)
     let f = this.form.value;
 
     let noticia = {
@@ -47,5 +48,12 @@ export class AddnoticiaPage implements OnInit {
     this.router.navigate(['/inicio'])
 
   }
-
+  gettitleMessage(){
+    if(this.form.controls.title.hasError('requiered')){
+      return 'Este campo es requerido'
+}
+if(this.form.controls.title.hasError('pattern')){
+  return 'solo se permite letras y espacio'
+}
+}
 }

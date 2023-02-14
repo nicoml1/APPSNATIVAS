@@ -17,6 +17,8 @@
           <ion-item>
             <ion-label position="floating">Título</ion-label>
             <ion-input formControlName="title" type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
+            <span *ngIf="form.controls.title.invalid && form.controls.title.touched"
+            [ngStyle]="{'color':'red'}"> {{gettitleMessage()}} </span>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Imágen</ion-label>
@@ -31,7 +33,7 @@
             <ion-input maxlength="1000" formControlName="description" type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
           </ion-item>
             <ion-buttons>
-            <ion-button (click)="saveNewNoticia()"><ion-icon name="send"></ion-icon>| ENVIAR</ion-button>
+            <ion-button  [disabled]="!form.valid" (click)="saveNewNoticia()"><ion-icon name="send"></ion-icon>| ENVIAR</ion-button>
             </ion-buttons>
           </form>
         </ion-card-content>
