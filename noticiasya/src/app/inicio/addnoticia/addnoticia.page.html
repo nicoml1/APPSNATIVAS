@@ -17,8 +17,6 @@
           <ion-item>
             <ion-label position="floating">Título</ion-label>
             <ion-input formControlName="title" type="text" placeholder="Escribe el título de la noticia" #title></ion-input>
-            <span *ngIf="form.controls.title.invalid && form.controls.title.touched"
-            [ngStyle]="{'color':'red'}"> {{gettitleMessage()}} </span>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Imágen</ion-label>
@@ -29,6 +27,8 @@
           <ion-item>
             <ion-label position="floating">Categoría</ion-label>
             <ion-input formControlName="subtitle" type="text" placeholder="Categoría de la noticia" #subtitle></ion-input>
+            <span *ngIf="form.controls.subtitle.invalid && form.controls.subtitle.touched"
+            [ngStyle]="{'color':'red'}"> {{getsubtitleMessage()}} </span>
           </ion-item>
           <ion-item counter="true">
             <ion-label position="floating">Descripción</ion-label>

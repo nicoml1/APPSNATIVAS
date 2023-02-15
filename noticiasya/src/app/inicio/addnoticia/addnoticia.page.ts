@@ -14,9 +14,9 @@ export class AddnoticiaPage implements OnInit {
 
   constructor(private noticiaservice: NoticiasService, private router: Router, private formBuilder: FormBuilder, public alertController: AlertController) { 
     this.form = this.formBuilder.group ({
-      'title': new FormControl("",[Validators.required, Validators.pattern('[a-zA-Z]*')]),
+      'title': new FormControl("",Validators.required),
       'imageURL': new FormControl("", [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]),
-      'subtitle': new FormControl("", Validators.required),
+      'subtitle': new FormControl("", [Validators.required, Validators.pattern('[a-zA-Z]*')]),
       'description': new FormControl("", Validators.required),
     });
   }
@@ -48,12 +48,12 @@ export class AddnoticiaPage implements OnInit {
     this.router.navigate(['/inicio'])
 
   }
-  gettitleMessage(){
-    if(this.form.controls.title.hasError('requiered')){
+  getsubtitleMessage(){
+    if(this.form.controls.subtitle.hasError('requiered')){
       return 'Este campo es requerido'
 }
-if(this.form.controls.title.hasError('pattern')){
-  return 'solo se permite letras y espacio'
+if(this.form.controls.subtitle.hasError('pattern')){
+  return 'solo se permiten letras'
 }
 }
 getimageURLMessage(){
