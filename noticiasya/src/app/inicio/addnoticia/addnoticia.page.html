@@ -34,6 +34,7 @@
             <ion-label position="floating">Descripción</ion-label>
             <ion-input maxlength="1000" formControlName="description" type="text" placeholder="Cuerpo de la noticia" #description></ion-input>
           </ion-item>
+          <h2>->Todos los campos son obligatorios.</h2>
             <ion-buttons>
             <ion-button  [disabled]="!form.valid" (click)="saveNewNoticia()"><ion-icon name="send"></ion-icon>| ENVIAR</ion-button>
             </ion-buttons>

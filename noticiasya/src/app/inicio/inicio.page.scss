@@ -15,7 +15,7 @@ ion-button{
     --background: #e2f93796;
     --background-activated: black;
     color: black;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 h4{
@@ -48,11 +48,14 @@ p{
     text-align: center;
 }
 
-.elim{
-    padding-bottom: 10px;
-    padding-left: 60px;
-}
-
 ion-refresher{
     background-color: #e2f93796;
+}
+
+ion-card-content{
+    text-align: center;
+}
+
+.elim{
+    margin-top: 10px;
 }

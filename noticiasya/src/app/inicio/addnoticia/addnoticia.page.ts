@@ -53,7 +53,7 @@ export class AddnoticiaPage implements OnInit {
       return 'Este campo es requerido'
 }
 if(this.form.controls.subtitle.hasError('pattern')){
-  return 'solo se permiten letras'
+  return 'Solo se permiten letras.'
 }
 }
 getimageURLMessage(){
@@ -61,7 +61,7 @@ getimageURLMessage(){
     return 'Este campo es requerido'
 }
 if(this.form.controls.imageURL.hasError('pattern')){
-return 'Solo se permiten imagenes'
+return 'Solo se permiten links a imágenes.'
 }
 }
 }
